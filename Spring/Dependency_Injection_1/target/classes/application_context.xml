@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ 
+ <bean id="ccard" class="di.CreditCard">
+ <constructor-arg type="int" value="2000"></constructor-arg>
+ <constructor-arg type="String" value="CiTi Bank"></constructor-arg>
+</bean>
+ <bean id="dcard" class="di.DebitCard">
+   <constructor-arg ref = "add"></constructor-arg>
+ </bean>
+ 
+ <bean id="add" class="di.Address">
+  <constructor-arg type="String" value="Sanpdeal"></constructor-arg>
+   <constructor-arg type="String" value="Banglore"></constructor-arg>
+ </bean>
+ 
+</beans>
